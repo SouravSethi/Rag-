@@ -1,0 +1,70 @@
+RAG SYSTEM ANSWERS WITH SCORES
+==================================================
+
+Q1: What is BERT and how does it work?
+Answer: BERT is a multi-layer bidirectional Transformer encoder, as described in the BERT paper (Source: BERT_Paper.pdf, Page: 2). It works by first being pre-trained on unlabeled data over different pre-training tasks, and then fine-tuned using labeled data from downstream tasks (Source: BERT_Paper.pdf, Page: 2). The pre-training tasks include Masked LM and Next Sentence Prediction (NSP) (Source: BERT_Paper.pdf, Page: 3). During pre-training, the model is trained to predict masked tokens and to predict whether two sentences are adjacent in the original text (Source: BERT_Paper.pdf, Page: 3). The model uses a unified architecture across different tasks, with minimal difference between the pre-trained architecture and the final downstream architecture (Source: BERT_Paper.pdf, Page: 2). 
+
+The input representation is constructed by summing the corresponding token, segment, and position embeddings (Source: BERT_Paper.pdf, Page: 3). The model also uses special tokens such as [CLS] and [SEP] to differentiate between sentences and to indicate the start and end of a sequence (Source: BERT_Paper.pdf, Page: 3). 
+
+Overall, BERT's architecture and pre-training tasks allow it to capture a wide range of linguistic and semantic information, making it a powerful tool for a variety of natural language processing tasks.
+Scores - Context: 5/5, Answer: 5/5, Ground: 5/5, Overall: 5.0/5
+------------------------------
+
+Q2: Explain the self-attention mechanism in Transformers
+Answer: The self-attention mechanism in Transformers is explained as follows: In the encoder, self-attention layers allow each position to attend to all positions in the previous layer of the encoder (Source: Attention_Is_All_You_Need.pdf, Page: 4). Similarly, in the decoder, self-attention layers allow each position to attend to all positions in the decoder up to and including that position (Source: Attention_Is_All_You_Need.pdf, Page: 4). However, to prevent leftward information flow in the decoder, the self-attention sub-layer in the decoder stack is modified to prevent positions from attending to subsequent positions (Source: Attention_Is_All_You_Need.pdf, Page: 2). 
+
+In more detail, the self-attention mechanism is a sub-layer in each layer of the encoder and decoder, where the keys, values, and queries come from the same place, which is the output of the previous layer (Source: Attention_Is_All_You_Need.pdf, Page: 4). This allows the model to attend to all positions in the input sequence and weigh their importance. 
+
+The self-attention mechanism is also combined with residual connections and layer normalization to facilitate the flow of information and prevent vanishing gradients (Source: Attention_Is_All_You_Need.pdf, Page: 2).
+Scores - Context: 5/5, Answer: 5/5, Ground: 5/5, Overall: 5.0/5
+------------------------------
+
+Q3: What are the key innovations of the Transformer architecture?
+Answer: I don't know. The context only mentions that the paper presents an overview of the modifications made to the transformer architecture (Vaswani et al., 2017) [Source: Llama_Paper.pdf, Page: 0], but it does not specify the key innovations of the Transformer architecture itself.
+Scores - Context: 5/5, Answer: 5/5, Ground: 2/5, Overall: 4.0/5
+------------------------------
+
+Q4: How does LoRA improve fine-tuning efficiency?
+Answer: LoRA improves fine-tuning efficiency by not requiring the accumulated gradient update to weight matrices to have full-rank during adaptation, and by allowing the training of a subset of the pre-trained parameters (LoRA_Paper.pdf, Page 3). Additionally, LoRA reduces the need to retune hyperparameters when varying the rank 'r' due to a scaling that helps (LoRA_Paper.pdf, Page 3, citing Yang & Hu, 2021). This enables LoRA to roughly recover the expressiveness of full fine-tuning while reducing the number of trainable parameters.
+Scores - Context: 4/5, Answer: 5/5, Ground: 4/5, Overall: 4.3/5
+------------------------------
+
+Q5: What is RAG and how does it combine retrieval with generation?
+Answer: The context provided does not explicitly define what RAG is, but it mentions the "RAG model" and its performance in relation to retrieval and generation. According to the context, when the retrieval component "collapses", the RAG model performs equivalently to BART [Source: RAG_Original.pdf, Page: 18]. However, the exact definition and combination of retrieval with generation in RAG is not provided in the given context. 
+
+I don't know the exact definition of RAG and how it combines retrieval with generation as this information is not available in the provided context.
+Scores - Context: 5/5, Answer: 5/5, Ground: 3/5, Overall: 4.3/5
+------------------------------
+
+Q6: Compare BERT and GPT model architectures
+Answer: According to the context, BERT uses a bidirectional Transformer, while OpenAI GPT uses a left-to-right Transformer (Source: BERT_Paper.pdf, Page: 12). This means that BERT is capable of considering both left and right context in all layers, whereas GPT only considers the context from left to right. Additionally, BERT and OpenAI GPT are fine-tuning approaches, whereas ELMo is a feature-based approach (Source: BERT_Paper.pdf, Page: 12).
+Scores - Context: 5/5, Answer: 5/5, Ground: 3/5, Overall: 4.3/5
+------------------------------
+
+Q7: How does positional encoding work in Transformers?
+Answer: I don't know. The provided context does not mention how positional encoding works in Transformers. (No relevant information found in [Source: Attention_Is_All_You_Need.pdf, Pages: 2, 4])
+Scores - Context: 3/5, Answer: 5/5, Ground: 2/5, Overall: 3.3/5
+------------------------------
+
+Q8: What are the main contributions of the Attention paper?
+Answer: I don't know. [The context provided does not mention the main contributions of the Attention paper, it only describes the attention mechanism and provides an example of attention visualizations.]
+Scores - Context: 5/5, Answer: 5/5, Ground: 2/5, Overall: 4.0/5
+------------------------------
+
+Q9: Who is Modi Ji
+Answer: I don't know. [There is no mention of "Modi Ji" in the provided context, Source: LoRA_Paper.pdf, Page: 17]
+Scores - Context: 3/5, Answer: 5/5, Ground: 2/5, Overall: 3.3/5
+------------------------------
+
+Q10: RAG Architecture ?
+Answer: The RAG architecture consists of two components: (i) a retriever pη(z|x) with parameters η that returns (top-K truncated) distributions over text passages given a query x, and (ii) a generator pθ(yi|x,z,y 1:i−1) (Source: RAG_Original.pdf, Page: 1).
+Scores - Context: 3/5, Answer: 5/5, Ground: 3/5, Overall: 3.7/5
+------------------------------
+
+
+SUMMARY:
+====================
+Average Context Relevance: 4.3/5
+Average Answer Relevance: 5.0/5
+Average Groundedness: 3.1/5
+Overall Average: 4.1/5
