@@ -96,7 +96,7 @@ The system can answer questions like:
 ## 📊 Project Structure
 
 ```
-module6/
+Rag/
 ├── main.ipynb              # Main implementation notebook
 ├── requirements.txt        # Python dependencies
 ├── analysis.md            # System strengths and weaknesses
